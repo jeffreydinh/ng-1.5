@@ -22,8 +22,7 @@
         <td>{{movie.length}}</td>
         <td>
             <!-- set value from component because we have a binding with the "<" sign -->
-            <movie-rating value="movie.rating">
-                <span class="glyphicon glyphicon-star"></span>
+            <movie-rating value="movie.rating" max="5">
             </movie-rating>
         </td>
         <td>

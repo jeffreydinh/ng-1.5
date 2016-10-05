@@ -31,7 +31,7 @@
 
         vm.goTo = function(id) {
             // navigates to the page
-            vm.$router.navigate(["Details", {id:id}]);
+            vm.$router.navigate(["Details", {id:id}, "Overview"]); // add "Overview" route paramter to tell the router that I want to start with the "overview"
 
         };
 

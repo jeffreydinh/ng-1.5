@@ -1,8 +1,4 @@
 <!-- ng-repeat likes to see unique objects inside of collections, so use track by -->
 <span ng-repeat="entry in vm.entries track by $index">
-    <!-- If the transcluded content is not empty (i.e. contains one or more DOM nodes, including whitespace text nodes), any existing content of this element will be removed before the transcluded content is inserted. If the transcluded content is empty (or only whitespace), the existing content is left intact.
-    This lets you provide fallback content in the case that no transcluded content is provided. -->
-    <ng-transclude>
-        *
-    </ng-transclude>
+    <span class="glyphicon {{entry}}"></span>
 </span>

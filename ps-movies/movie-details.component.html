@@ -2,7 +2,10 @@ This is movie-details {{ model.id }}
 
 <!-- ul>li*3>a -->
 <ul>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
+    <li><a ng-link="['Overview']">Overview</a></li>
+    <li><a ng-link="['Cast']">Cast</a></li>
+    <li><a ng-link="['Director']">Director</a></li>
 </ul>
+
+<!-- ng-outlet direct to load the different components based on URL -->
+<ng-outlet></ng-outlet>
