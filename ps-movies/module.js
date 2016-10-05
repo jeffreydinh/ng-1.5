@@ -2,7 +2,7 @@
     "use strict";
 
     // tell angular I have a dependency on the route module - ngComponentRouter
-    var module = angular.module("psMovies", ["ngComponentRouter"]);
+    var module = angular.module("psMovies", ["ngComponentRouter", "ngAnimate"]);
 
     // inject service $routerRootComponent. component name: movieApp
     // now component router knows top level routing and navigation rules - root component is movieApp / movie-app
