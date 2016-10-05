@@ -35,6 +35,11 @@
 
         };
 
+        // change will propagate back into the child component where we have input binding
+        vm.setRating = function(movie, newRating) {
+            movie.rating = newRating;
+        };
+
         vm.upRating = function(movie) {
             if (movie.rating < 5) {
                 movie.rating += 1;

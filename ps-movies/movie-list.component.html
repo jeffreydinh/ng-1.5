@@ -22,7 +22,9 @@
         <td>{{movie.length}}</td>
         <td>
             <!-- set value from component because we have a binding with the "<" sign -->
-            <movie-rating value="movie.rating" max="5">
+            <movie-rating value="movie.rating" max="5"
+                          set-rating="vm.setRating(movie, value)">
+                          <!-- angular does its magic to figure out how to pass star values to specific movie -->
             </movie-rating>
         </td>
         <td>

@@ -26,8 +26,17 @@
             // word "value" is chosen arbitrary
             // "<" tells angular that this is an input - this value will be given to me from the outside world
             // max "<" is also an input
+            /**
+             * @ - read attributes
+             * & - function bindings
+             * = - two way binding
+             * < - input binding
+             *
+             * event - whenever the user click on a star, from this component, invoke this setRating number and pass along the new value
+             */
             value: "<",
-            max: "<"
+            max: "<",
+            setRating: "&"
         },
         controllerAs: "vm",
         controller: function() {
