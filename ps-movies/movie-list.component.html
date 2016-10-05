@@ -1,0 +1,52 @@
+<h3>Feel the breeze on your skin.</h3>
+<h5> {{vm.message}} </h5>
+<!-- ng-model: bind view into model -->
+<input type="text" ng-model="vm.message">
+<!-- ng-click: specify custom behavior when clicked -->
+<button ng-click="vm.changeMessage()">Change Message</button>
+
+<!-- table.table -->
+<table class="table">
+    <!-- tr>th*4 -->
+    <tr>
+        <th>Title</th>
+        <th>Length</th>
+        <th>Rating</th>
+        <th>
+
+        </th>
+    </tr>
+    <!-- ngRepeat - directive instantiates a template once per item from a collection. Each template instance gets its own scope -->
+    <tr ng-repeat="movie in vm.movies">
+        <td>{{movie.title}}</td>
+        <td>{{movie.length}}</td>
+        <td>
+            <!-- set value from component because we have a binding with the "<" sign -->
+            <movie-rating value="movie.rating">
+                <span class="glyphicon glyphicon-star"></span>
+            </movie-rating>
+        </td>
+        <td>
+            <!-- div.btn-group -->
+
+                <!-- button.btn.btn-default -->
+                <button class="btn btn-default" ng-click="vm.upRating(movie)">
+                    <!-- span.glyphicon.glyphicon-plus -->
+                    <span class="glyphicon glyphicon-plus">
+
+                    </span>
+                </button>
+                <button class="btn btn-default" ng-click="vm.downRating(movie)">
+                    <!-- span.glyphicon.glyphicon-plus -->
+                    <span class="glyphicon glyphicon-minus">
+
+                    </span>
+                </button>
+
+            <button ng-click="vm.goTo(movie.id)" class="btn btn-default">
+                <span class="glyphicon glyphicon-zoom-in"></span>
+            </button>
+
+        </td>
+    </tr>
+</table>
